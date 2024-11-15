@@ -199,10 +199,12 @@ body {
 
 /* Estilo para a seção de destaque (Sobre Mim) */
 .section.destaque {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza */
     padding: 2rem;
     color: #e0e0e0;
+    width: 100%; /* Faz a seção ocupar toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding na largura */
 }
 
 /* Estilo para as seções de card (Currículo e Projetos) */
@@ -410,6 +412,13 @@ footer p {
 
     .main-content {
         margin-left: 0; /* Retira a margem quando a sidebar não estiver visível */
+    }
+}
+@media (max-width: 768px) {
+    .section.destaque {
+        padding: 1rem; /* Reduz o padding em telas pequenas */
+        width: 100%; /* Garante que a seção ocupe toda a largura disponível */
+        max-width: 100%; /* Remove a largura máxima para telas pequenas */
     }
 }
 
