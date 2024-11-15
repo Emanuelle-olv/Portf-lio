@@ -1,6 +1,6 @@
-/* Estilos Gerais */
+/* Estilo Geral do Body */
 body {
-    font-family: 'Roboto', sans-serif; /* Altera para uma fonte mais moderna e fácil de ler */
+    font-family: 'Roboto', sans-serif;
     background-color: #0d0d0df7;
     color: #e0e0e0;
     margin: 0;
@@ -9,22 +9,24 @@ body {
     flex-direction: column;
     min-height: 100vh;
     text-align: justify;
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte para melhorar a leitura */
-    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+    font-size: 1.2rem;
+    overflow-x: hidden;
 }
 
+/* Sidebar Menu */
 .sidebar-menu {
     position: fixed;
     top: 0;
     left: 0;
-    width: 220px; /* Aumenta ligeiramente a largura */
+    width: 220px;
     height: 100%;
-    background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Gradiente de fundo */
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para profundidade */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Assegura que o menu fique acima do conteúdo */
 }
 
 .sidebar-menu .menu {
@@ -73,9 +75,11 @@ body {
 }
 
 
+/* Principal Conteúdo */
 .main-content {
-    margin-left: 150px; /* Remova ou ajuste a margem esquerda */
+    margin-left: 220px; /* Garante que o conteúdo não seja sobreposto */
     padding: 20px;
+    z-index: 1; /* Coloca o conteúdo abaixo da sidebar */
 }
 .main-content, .content-container {
     max-width: 100%; /* Garante que o contêiner ocupe a largura total da tela */
@@ -360,22 +364,63 @@ footer p {
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
-    #habilidades .content {
-        flex-direction: column;
-    }
-}
-@media (max-width: 768px) {
+    /* Sidebar fica oculta */
     .sidebar-menu {
         display: none;
     }
 
-    /* Mostre o menu superior para dispositivos móveis, se necessário */
-    header {
-        display: flex;
+    /* Ajuste o conteúdo principal */
+    .main-content {
+        margin-left: 0;
+        padding: 10px; /* Adiciona mais padding em telas pequenas */
+    }
+
+    /* O conteúdo principal fica com maior largura */
+    .content-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Ajuste a largura dos ícones de tecnologia */
+    .tech-icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ajuste das colunas em habilidades e outras seções */
+    #habilidades .content {
+        flex-direction: column;
+    }
+    
+    .foto {
+        width: 100px;
+        height: 100px;
+        margin-right: 1rem;
+    }
+
+    .section-title, .section h2 {
+        font-size: 1.8rem; /* Diminui o tamanho dos títulos em telas menores */
+    }
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .sidebar-menu {
+        display: none; /* Esconde a sidebar em telas menores */
     }
 
     .main-content {
-        margin-left: 0; /* Remova o deslocamento do menu lateral */
+        margin-left: 0; /* Retira a margem quando a sidebar não estiver visível */
     }
 }
 
+/* Ajuste para quando aumentar o zoom */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 10px; /* Adiciona um padding para evitar o sobrecarregamento do conteúdo */
+    }
+}
+/* Outras melhorias de responsividade, como imagens */
+.tech-icons-inline img {
+    width: calc(100% / 13 - 5px); /* Ajusta a largura para ficar bem distribuída */
+    height: auto;
+}
