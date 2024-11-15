@@ -144,19 +144,6 @@ body {
         0 0 0 5px #261111, /* Primeiro círculo de cor clara */
         0 0 0 10px #580000; /* Segundo círculo de cor vermelha */
 }
-.foto::after {
-    content: "Marca d'água"; /* Substitua por texto ou conteúdo desejado */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.5); /* Cor branca com transparência */
-    font-size: 12px;
-    font-weight: bold;
-    pointer-events: none;
-    user-select: none;
-    z-index: 10;
-}
 /* Centralizar a imagem verticalmente com o texto */
 #sobre-mim .content {
     display: flex;
