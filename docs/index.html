@@ -3,133 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio ESGO</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfólio Emanuelle Oliveira</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-esgo">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo do Portfólio" class="logo">
+
+    <!-- Menu Lateral Fixo -->
+    <div class="sidebar-menu">
+        <nav class="menu">
+            <a href="#sobre-mim">Sobre Mim</a>
+            <a href="#curriculo">Currículo</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#certificacoes">Certificações</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre-mim" class="section destaque">
+        <div class="content-container">
+            <div class="content">
+                <img src="foto-me.jpeg" alt="Foto de Emanuelle Oliveira" class="foto">
+                <div>
+                    <h2>Emanuelle Oliveira</h2>
+                    <p>Sou estudante de Desenvolvimento de Software Multiplataforma na Fatec São José dos Campos, com interesse em análise de dados e estatística. Meu perfil INTJ-T reflete uma abordagem lógica e estruturada para resolver problemas, desde o levantamento de hipóteses até a busca por soluções práticas. Estou me aprofundando em Python e modelagem de bancos de dados, ferramentas que me permitem trabalhar com grandes volumes de informações e aplicar conceitos estatísticos para gerar insights valiosos. Procuro oportunidades onde possa unir habilidades técnicas e pensamento analítico para criar soluções que façam a diferença.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Currículo -->
+    <section id="curriculo" class="section card">
+        <div class="content-container">
+            <h2>Currículo</h2>
+            <article>
+                <h3>Formação Acadêmica</h3>
+                <p><strong>FATEC-SJC</strong> - Desenvolvimento de Software Multiplataforma, 2024 - até o momento.</p>
+                <p><strong>Universidade Federal de Mato Grosso</strong> - Bacharelado em Música (Habilitação em Regência), 2015 a 2021.</p>
+                
+            </article>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="section card">
+        <div class="content-container">
+            <h2>Projetos</h2>
+            <article>
+                <h3>Aprendizado por Projeto Integrado (API) Fatec - Turma DSM 2024 | 2</h3>
+                <p>O projeto teve como objetivo o desenvolvimento de uma plataforma web para o acompanhamento do desempenho dos vereadores em exercício na cidade de São José dos Campos. A plataforma permite visualizações gráficas comparativas e possibilita que os cidadãos interajam, deixando comentários e feedbacks sobre o desempenho dos representantes públicos.</p>
+                
+                <h4>Ferramentas Utilizadas</h4>
+                <div class="tech-icons-inline">
+                    <img src="html.png" alt="HTML" title="HTML">
+                    <img src="css.png" alt="CSS" title="CSS">
+                    <img src="js.png" alt="JavaScript" title="JavaScript">
+                    <img src="python.png" alt="Python" title="Python">
+                    <img src="flask.png" alt="Flask" title="Flask">
+                    <img src="Git.svg" alt="Git" title="Git">
+                    <img src="sql.png" alt="SQL" title="SQL">
+                    <img src="jira.png" alt="Jira" title="Jira">
+                    <img src="Discord.svg" alt="Discord" title="Discord">
+                    <img src="windows.png" alt="Windows" title="Windows">
+                    <img src="vscode.png" alt="VS Code" title="VS Code">
+                    <img src="github.png" alt="GitHub" title="GitHub">
+                    <img src="figma.png" alt="Figma" title="Figma">
+                </div>
+
+                <h4>Minhas Contribuições como Product Owner</h4>
+                <ul>
+                    <li><strong>Proposta de Modelo de Projeto:</strong> Como Product Owner, propus um modelo de projeto que priorizava a experiência do usuário e a simplicidade de navegação, aplicando uma alternativa eficaz e suficiente em relação a abordagem dos outros grupos de API da classe. Essa proposta facilitou o trabalho de raspagem de dados da equipe, eliminando informações irrelevantes e garantindo que apenas dados essenciais fossem coletados, o que resultou em uma aplicação mais leve e eficiente.</li>
+                    <li><strong>Desenvolvimento e Estruturação do Backend:</strong> Implementei e organizei toda a infraestrutura de backend utilizando Flask, desde a criação do arquivo principal <code>app.py</code> até a definição das rotas e filtros para todas as telas da aplicação. Estruturei o modelo HTML inicial com Flask, que serviu como padrão para os demais desenvolvedores, estabelecendo uma base uniforme e organizada. Além disso, realizei um estudo aprofundado sobre a manipulação de arquivos JSON e compartilhei esse conhecimento com o grupo, proporcionando uma base sólida para que todos pudessem trabalhar de maneira eficiente com esse formato de dados.</li>
+                    <li><strong>Design e Desenvolvimento das Páginas Principais:</strong> Fui responsável pelo design e implementação de diversas páginas essenciais da plataforma. Propus e desenvolvi a página "Proposições Aprovadas", ajustando o conteúdo e layout dessa seção para oferecer uma visão detalhada das propostas aprovadas pelos vereadores. Também sugeri que a tela inicial funcionasse como um manual de uso, orientando o usuário sobre as funcionalidades do site para facilitar a navegação. Além disso, construí as páginas de "Comentários" e "Estatísticas", com foco em usabilidade e experiência do usuário. Apliquei uma estilização cuidadosa, ajustando o layout para garantir uma interface intuitiva e visualmente atraente, e realizei a revisão do design das demais telas, corrigindo inconsistências e aprimorando a apresentação geral da aplicação.</li>
+                    <li><strong>Modelagem Completa do Banco de Dados:</strong> Realizei a modelagem do banco de dados em todas as suas etapas – conceitual, lógica e física – e implementei um backup para o repositório.</li>
+                    <li><strong>Gestão do Repositório e Controle de Versionamento:</strong> Atuei na administração do repositório no GitHub, assegurando um fluxo de trabalho organizado com controle de versões e integração de contribuições de forma coesa. Esta administração garantiu um ambiente de desenvolvimento colaborativo e bem estruturado.</li>
+                    <li><strong>Auxílio Técnico na Raspagem de Dados:</strong> Apoiei a equipe na raspagem de dados, sugerindo práticas que simplificaram o processo e garantiram a obtenção de informações relevantes e precisas para alimentar as estatísticas da plataforma.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades --> 
+    <section id="habilidades" class="section card">
+        <div class="content-container">
+            <h2>Habilidades</h2>
+            <div class="content">
+                <!-- Habilidades Técnicas (Hard Skills) -->
+                <div>
+                    <h3>Habilidades Técnicas (Hard Skills)</h3>
+                    <ul>
+                        <li>
+                            Linguagens de Programação: Experiência em HTML, CSS, JavaScript e Python.
+                            <div class="tech-icons">
+                                <img src="html.png" alt="HTML" title="HTML">
+                                <img src="css.png" alt="CSS" title="CSS">
+                                <img src="js.png" alt="JavaScript" title="JavaScript">
+                                <img src="python.png" alt="Python" title="Python">
+                            </div>
+                        </li>
+                        <li>
+                            Ferramentas e Frameworks: Flask e Git.
+                            <div class="tech-icons">
+                                <img src="flask.png" alt="Flask" title="Flask">
+                                <img src="Git.svg" alt="Git" title="Git">
+                            </div>
+                        </li>
+                        <li>
+                            Bancos de Dados: Conhecimento básico de SQL.
+                            <div class="tech-icons">
+                                <img src="sql.png" alt="SQL" title="SQL">
+                            </div>
+                        </li>
+                        <li>
+                            Ferramentas de Trabalho: Jira, Discord, Windows, VS Code, GitHub e Figma.
+                            <div class="tech-icons">
+                                <img src="jira.png" alt="Jira" title="Jira">
+                                <img src="Discord.svg" alt="Discord" title="Discord">
+                                <img src="windows.png" alt="Windows" title="Windows">
+                                <img src="vscode.png" alt="VS Code" title="VS Code">
+                                <img src="github.png" alt="GitHub" title="GitHub">
+                                <img src="figma.png" alt="Figma" title="Figma">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Habilidades Interpessoais (Soft Skills) -->
+                <div>
+                    <h3>Habilidades Interpessoais (Soft Skills)</h3>
+                    <ul class="softskills">
+                        <li>Liderança de Projeto: Atuação como Product Owner (PO), coordenando equipes e entregas.</li>
+                        <li>Comunicação: Capacidade de apresentar ideias e colaborar de maneira eficiente com a equipe.</li>
+                        <li>Resolução de Problemas: Abordagem analítica para identificar e solucionar desafios técnicos.</li>
+                        <li>Trabalho em Equipe: Experiência em trabalhar eficazmente em equipes multidisciplinares.</li>
+                        <li>Autogerenciamento: Habilidade para trabalhar de forma autônoma e cumprir prazos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Documentos 
+    <section id="documentos" class="section card">
+        <div class="content-container">
+            <h2>Documentos</h2>
+            <p>Documentos importantes que refletem minha trajetória profissional e acadêmica.</p>
+        </div>
+    </section>-->
+
+    <!-- Seção Certificações -->
+<section id="certificacoes" class="section card">
+    <div class="content-container">
+        <h2>Certificações</h2>
+        <div class="certificados-container">
+            <!-- Certificado 1 -->
+            <div class="certificado-item">
+                <h3>Escola da Nuvem - Fundamentos de Tecnologia</h3>
+                <button onclick="openModal('escoladanuvem.png')">Ver Certificado</button>
+            </div>
+            <!-- Certificado 2 -->
+            <div class="certificado-item">
+                <h3>Escola de Inovadores - 19ª Edição</h3>
+                <button onclick="openModal('inovadores_2024.png')">Ver Certificado</button>
+            </div>
+            <!-- Certificado 3 -->
+            <div class="certificado-item">
+                <h3>FGV Online - Introdução à Ciência de Dados</h3>
+                <button onclick="openModal('fgvonline2024.png')">Ver Certificado</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para visualização das imagens -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+</section>
+
+
+
+    <!-- Seção Contato --> 
+<section id="contato" class="section card">
+    <div class="content-container">
+        <h2>Contato</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/emanuelle-oliveira-ab9716296/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" title="LinkedIn">
+            </a>
+            <a href="https://github.com/Emanuelle-olv" target="_blank">
+                <img src="meugit.png" alt="GitHub" title="GitHub">
+            </a>
+            <a href="mailto:emanuelle.oliveira2@fatec.sp.gov.br">
+                <img src="email.png" alt="E-mail" title="Enviar E-mail">
             </a>
         </div>
-        <nav class="menu">
-            <a href="index.html">Home</a>
-            <a href="curriculo.html">Currículo</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="documentos.html">Documentos</a>
-            <a href="certificações.html">Certificações</a>
-            <a href="contato.html">Contato</a> 
-        </nav>
-    </header>
+    </div>
+</section>
 
-    
 
-    <main>
-        <!-- Carrossel -->
-        <section class="carousel-container">
-            <div class="carousel-content">
-                <div class="carousel-item">
-                    <h2>Currículo</h2>
-                    <p>Um resumo detalhado da minha formação acadêmica, das minhas experiências profissionais e das certificações que conquistei.</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Projetos</h2>
-                    <p>Aqui, destaco os principais projetos que desenvolvi, explicando os desafios enfrentados e as soluções adotadas.</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Habilidades</h2>
-                    <p>Nesta seção, apresento minhas principais competências técnicas e interpessoais, adquiridas ao longo da minha carreira.</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Documentos</h2>
-                    <p>Uma área dedicada aos meus trabalhos acadêmicos, relatórios e artigos.</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Certificações</h2>
-                    <p>Aqui, você encontrará meus certificados em diversos cursos e treinamentos.</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Contato</h2>
-                    <p>Para qualquer consulta ou oportunidade de colaboração, esta página disponibiliza meus dados de contato.</p>
-                </div>
-            </div>
-
-            <!-- Indicadores do carrossel -->
-            <div class="carousel-indicators">
-                <div class="indicator active" data-slide="0"></div>
-                <div class="indicator" data-slide="1"></div>
-                <div class="indicator" data-slide="2"></div>
-                <div class="indicator" data-slide="3"></div>
-                <div class="indicator" data-slide="4"></div>
-                <div class="indicator" data-slide="5"></div>
-            </div>
-        </section>
-
-        <!-- Seção Sobre Mim -->
-       
-        <section class="sobre-mim">
-            <section class="nome">
-                <h1>Emanuelle Oliveira</h1>
-            </section>
-            <img src="foto-me.jpeg" alt="Foto de Emanuelle Oliveira" class="foto-me">
-            <div class="sobre-texto">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Estudante de Desenvolvimento de Software Multiplataforma na Fatec São José dos Campos, tendo meu foco em Ciência de Dados. 
-                    Sou apaixonada por resolver problemas e extrair insights valiosos através da análise de dados. Tenho um perfil INTJ-T, 
-                    o que me permite abordar problemas de forma lógica e estruturada.
-                </p>
-                <p>
-                    Atualmente, estou me aprofundando em Python e modelagem de banco de dados, áreas que me fascinam pela aplicação prática e impacto 
-                    direto no processamento e interpretação de grandes volumes de dados. Busco oportunidades que me permitam crescer na Ciência de Dados, 
-                    contribuindo com soluções baseadas em análise e estatística.
-                </p>
-            </div>
-        </section>
-    </main>
-
+    <!-- Rodapé -->
     <footer>
-        <p><strong>Todos os Direitos Reservados</strong></p>
+        <p>Todos os Direitos Reservados © Emanuelle Oliveira</p>
     </footer>
-
-    <script>
-        let currentIndex = 0;
-        const carouselContent = document.querySelector('.carousel-content');
-        const items = document.querySelectorAll('.carousel-item');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalItems = items.length;
-
-        function showNextItem() {
-            currentIndex++;
-            if (currentIndex >= totalItems) {
-                currentIndex = 0; // Volta ao início quando chega ao fim
-            }
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const translateX = -currentIndex * 100;
-            carouselContent.style.transform = `translateX(${translateX}%)`;
-
-            // Atualiza os indicadores
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentIndex);
-            });
-        }
-
-        // Adiciona funcionalidade aos indicadores
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentIndex = index;
-                updateCarousel();
-            });
-        });
-
-        // Troca de item a cada 4 segundos
-        setInterval(showNextItem, 4000);
-    </script>
+    </div>
 </body>
+<script>
+    function openModal(imageSrc) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = imageSrc;
+    }
+    
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+    </script>
+    
 </html>

@@ -1,0 +1,394 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Altera para uma fonte mais moderna e fácil de ler */
+    background-color: #0d0d0df7;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: justify;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte para melhorar a leitura */
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; /* Aumenta ligeiramente a largura */
+    height: 100%;
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Gradiente de fundo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para profundidade */
+}
+
+.sidebar-menu .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Aumenta o espaçamento entre os itens */
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+    font-weight: 500; /* Torna a fonte mais robusta */
+}
+
+.sidebar-menu .menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 1rem 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar-menu .menu a:hover {
+    color: #ff4d4d;
+    transform: translateX(5px); /* Move o item ligeiramente para a direita */
+}
+
+.sidebar-menu .menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff4d4d;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.sidebar-menu .menu a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.sidebar-menu .menu a:focus {
+    outline: none;
+    color: #ff4d4d; /* Torna o foco visível no mesmo estilo do hover */
+}
+
+
+.main-content {
+    margin-left: 150px; /* Remova ou ajuste a margem esquerda */
+    padding: 20px;
+}
+.main-content, .content-container {
+    max-width: 100%; /* Garante que o contêiner ocupe a largura total da tela */
+    box-sizing: border-box; /* Inclui o padding dentro da largura */
+}
+
+
+/* Seções */
+.content-container {
+    max-width: 100%; /* Garante que o contêiner ocupe a largura total */
+    width: 100%; /* Expande o contêiner para toda a largura disponível */
+    margin: 0 auto;
+    padding: 0 1rem; /* Mantém algum espaçamento lateral */
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0.6px;
+}
+
+
+/* Estilo para os títulos principais das seções */
+.section-title {
+    color: #ff4d4d;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+/* Ajuste para o conteúdo das seções */
+.section {
+    padding: 2rem 0; /* Ajusta o espaçamento superior e inferior das seções */
+    color: #e0e0e0;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+/* Logos de tecnologia */
+.tech-icons img {
+    width: 50px; /* Ajuste para o tamanho desejado */
+    height: 50px; /* Ajuste para o tamanho desejado */
+    object-fit: contain; /* Mantém a proporção original da imagem */
+    margin: 5px; /* Espaçamento entre as imagens */
+}
+
+/* Títulos das Seções */
+.section h2 {
+    color: #ff4d4d;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('foto-me.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 2rem; /* Aumenta o espaço entre a imagem e o texto */
+    pointer-events: none;
+    user-select: none;
+    
+    /* Borda dupla com efeito entrelaçado */
+    box-shadow: 
+        0 0 0 5px #261111, /* Primeiro círculo de cor clara */
+        0 0 0 10px #580000; /* Segundo círculo de cor vermelha */
+}
+.foto::after {
+    content: "Marca d'água"; /* Substitua por texto ou conteúdo desejado */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.5); /* Cor branca com transparência */
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+/* Centralizar a imagem verticalmente com o texto */
+#sobre-mim .content {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    gap: 2rem; /* Espaço entre imagem e texto */
+}
+/* Ajuste para alinhar o primeiro título com os demais */
+#sobre-mim h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    color: #ff4d4d; /* Ajuste a cor para corresponder ao estilo */
+}
+
+/* Estilo para centralizar o conteúdo da seção "Sobre Mim" */
+#sobre-mim .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: justify;
+}
+
+
+.tech-icons-inline {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os ícones uniformemente ao longo da linha */
+}
+
+.tech-icons-inline img {
+    width: calc(100% / 13 - 5px); /* Divide o espaço uniformemente considerando 13 ícones e gap */
+    height: auto;
+}
+
+
+/* Ajuste de layout para Hard e Soft Skills */
+#habilidades .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#habilidades .content > div {
+    flex: 1 1 45%; /* Cada coluna ocupa aproximadamente metade da largura */
+    min-width: 300px;
+}
+
+/* Estilo para a seção de destaque (Sobre Mim) */
+.section.destaque {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #e0e0e0;
+}
+
+/* Estilo para as seções de card (Currículo e Projetos) */
+/* Ajuste para centralizar e justificar corretamente o conteúdo principal */
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Espaçamento interno das laterais */
+    text-align: justify; /* Justificação do texto */
+}
+
+/* Ajuste específico para os títulos principais das seções */
+.section h2 {
+    color: #ff4d4d;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* Ajuste adicional para títulos menores (h3 e h4) */
+.section.card h3, .section.card h4 {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+
+.section.card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.section.card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Seção de Certificados */
+.certificados-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+.certificado-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certificado-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* Botão para visualizar certificados */
+button {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e63939;
+}
+
+/* Estilo do Modal para exibir os certificados */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff4d4d;
+}
+/* Estilo para os ícones sociais na seção de Contato */
+.social-icons {
+    display: flex;
+    gap: 2rem; /* Ajuste o espaço entre os ícones */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    margin-top: 1.5rem;
+}
+
+.social-icons img {
+    width: 95px; /* Aumenta o tamanho dos ícones */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+.main-content {
+    min-height: calc(100vh - 50px); /* Ajuste para o tamanho do footer */
+}
+
+footer {
+    background-color: #0d0d0d; /* Cor uniforme com o resto da página */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem 0; /* Reduz o padding para diminuir a altura */
+    font-size: 0.9rem;
+    width: 100%;
+    border-top: 1px solid #2c2c2c; /* Linha superior para separação */
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300; /* Fonte mais leve para aparência mais sutil */
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #habilidades .content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar-menu {
+        display: none;
+    }
+
+    /* Mostre o menu superior para dispositivos móveis, se necessário */
+    header {
+        display: flex;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remova o deslocamento do menu lateral */
+    }
+}
+
