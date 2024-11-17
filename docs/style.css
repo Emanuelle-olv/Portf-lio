@@ -404,6 +404,31 @@ footer p {
         font-size: 1.8rem; /* Diminui o tamanho dos títulos em telas menores */
     }
 }
+@media (max-width: 768px) {
+    /* Ajusta o layout da seção "Sobre Mim" */
+    #sobre-mim .content {
+        flex-direction: column; /* Coloca a foto acima do texto */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 1rem; /* Ajusta o espaçamento entre a foto e o texto */
+    }
+
+    /* Ajusta o tamanho da foto no celular */
+    .foto {
+        width: 120px; /* Reduz o tamanho da foto */
+        height: 120px;
+        margin-right: 0; /* Remove o espaço extra à direita */
+    }
+
+    /* Ajuste no título da seção para celular */
+    #sobre-mim h2 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    /* Ajuste no texto da seção para celular */
+    #sobre-mim .content-container {
+        padding: 0 1rem; /* Ajusta o padding para celulares */
+    }
+}
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .sidebar-menu {
